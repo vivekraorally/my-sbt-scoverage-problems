@@ -1,17 +1,60 @@
-name := """my-sbt-scoverage-problems"""
-organization := "myorg"
+name := "my-sbt-scoverage-problems"
 
-version := "1.0-SNAPSHOT"
+organization in ThisBuild := "myorg"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+//
+// Scala & Compiler options
+//
+scalaVersion in ThisBuild := "2.11.6"
 
-scalaVersion := "2.12.3"
+scalacOptions in ThisBuild := Seq(
+  "-feature",
+  "-deprecation",
+  "-unchecked"
+)
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
+lazy val useProjectScalaVersion = Seq(
+  ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
+)
 
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "myorg.controllers._"
+//
+// Project & Module setup
+//
+lazy val IntegrationTestWithUnitTestAsDep = config("it") extend Test
 
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "myorg.binders._"
+def baseProject(
+  id: String,
+  base: File,
+  settings: Seq[Def.Setting[_]] = Seq.empty,
+  dependencies: Seq[ModuleID] = Seq.empty
+): Project =
+  Project(id = id, base = base, settings = settings)
+    .configs(IntegrationTestWithUnitTestAsDep)
+    .settings(useProjectScalaVersion)
+    .settings(Defaults.itSettings : _*)
+    .settings(libraryDependencies ++= dependencies)
+    .enablePlugins(ScoverageSbtPlugin)
+    .settings(
+      coverageExcludedPackages := ".*module.*;",
+      coverageExcludedFiles := ".*buildinfo.BuildInfo",
+      coverageOutputDebug := true
+    )
+    .enablePlugins(BuildInfoPlugin)
+    .settings(
+      buildInfoKeys := Seq[BuildInfoKey](version)
+    )
+
+lazy val backend = baseProject("backend", file("backend"))
+
+//
+// Other settings
+//
+testForkedParallel in ThisBuild := false
+fork in ThisBuild := false
+parallelExecution in ThisBuild := false
+
+// Make sure the root isn't published
+publishArtifact := false
+
+// enables integration tests
+Defaults.itSettings

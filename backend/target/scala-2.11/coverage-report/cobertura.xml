@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage 
+line-rate="0.00" lines-valid="5" lines-covered="0" branches-valid="0" branches-covered="0" branch-rate="0.00" complexity="0" version="1.0" timestamp="1521300921258">
+    <sources>
+        <source>--source</source>
+        <source>/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala</source>
+        <source>/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/target/scala-2.11/src_managed/main</source>
+    </sources>
+    <packages>
+        <package name="myorg.first" line-rate="0.00" branch-rate="0.00" complexity="0">
+            <classes>
+                <class 
+                name="myorg.first.TestOneImpl" filename="myorg/first/TestOne.scala" line-rate="0.00" branch-rate="0.00" complexity="0">
+                    <methods>
+                        <method name="myorg.first/TestOneImpl/method1" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="18" hits="0" branch="false"/>
+                                <line number="17" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="myorg.first/TestOneImpl/method2" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="22" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="18" hits="0" branch="false"/>
+                        <line number="17" hits="0" branch="false"/>
+                        <line number="22" hits="0" branch="false"/>
+                    </lines>
+</class>
+            </classes>
+        </package>
+        <package name="myorg.second" line-rate="0.00" branch-rate="0.00" complexity="0">
+            <classes>
+                <class 
+                name="myorg.second.Test2Impl" filename="myorg/second/Test2.scala" line-rate="0.00" branch-rate="0.00" complexity="0">
+                    <methods>
+                        <method name="myorg.second/Test2Impl/method2" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="19" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                        <method name="myorg.second/Test2Impl/method1" signature="()V" line-rate="0.00" branch-rate="0.00" complexity="0">
+                            <lines>
+                                <line number="15" hits="0" branch="false"/>
+                            </lines>
+                        </method>
+                    </methods>
+                    <lines>
+                        <line number="19" hits="0" branch="false"/>
+                        <line number="15" hits="0" branch="false"/>
+                    </lines>
+</class>
+            </classes>
+        </package>
+    </packages>
+</coverage>

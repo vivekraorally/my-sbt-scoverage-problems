@@ -1,0 +1,58 @@
+<scoverage 
+statement-count="5" statements-invoked="0" statement-rate="0.00" branch-rate="0.00" version="1.0" timestamp="1521300921286">
+    <packages>
+        <package name="myorg.first" statement-count="3" statements-invoked="0" statement-rate="0.00">
+            <classes>
+                <class 
+                name="myorg.first.TestOneImpl" filename="myorg/first/TestOne.scala" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="myorg.first/TestOneImpl/method1" statement-count="2" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="myorg.first" class="TestOneImpl" class-type="Class" full-class-name="myorg.first.TestOneImpl" source="/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala/myorg/first/TestOne.scala" method="method1" start="267" end="271" line="18" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="myorg.first" class="TestOneImpl" class-type="Class" full-class-name="myorg.first.TestOneImpl" source="/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala/myorg/first/TestOne.scala" method="method1" start="245" end="262" line="17" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="myorg.first/TestOneImpl/method2" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="myorg.first" class="TestOneImpl" class-type="Class" full-class-name="myorg.first.TestOneImpl" source="/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala/myorg/first/TestOne.scala" method="method2" start="317" end="321" line="22" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package name="myorg.second" statement-count="2" statements-invoked="0" statement-rate="0.00">
+            <classes>
+                <class 
+                name="myorg.second.Test2Impl" filename="myorg/second/Test2.scala" statement-count="2" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="myorg.second/Test2Impl/method2" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="myorg.second" class="Test2Impl" class-type="Class" full-class-name="myorg.second.Test2Impl" source="/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala/myorg/second/Test2.scala" method="method2" start="262" end="266" line="19" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="myorg.second/Test2Impl/method1" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="myorg.second" class="Test2Impl" class-type="Class" full-class-name="myorg.second.Test2Impl" source="/Users/vivek.rao/code/my-sbt-scoverage-problems/backend/src/main/scala/myorg/second/Test2.scala" method="method1" start="212" end="216" line="15" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>
